@@ -19,6 +19,11 @@ helpers do
 	alias_method :h, :escape_html
 end
 
+get '/rss.xml' do
+	@notes = Note.all :order => :id.desc
+	builder :rss
+end
+
 get '/' do
 	@notes = Note.all :order => :id.desc
 	@title = 'All Notes'
