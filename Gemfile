@@ -5,6 +5,7 @@ gem 'shotgun'
 gem 'sqlite3'
 gem 'data_mapper'
 gem 'builder'
+gem 'sinatra-flash'
 
 group :development do
 	gem 'dm-sqlite-adapter'
