@@ -43,3 +43,15 @@ put '/:id' do
 	n.save
 	redirect '/'
 end
+
+get '/:id/delete' do
+	@note = Note.get params[:id]
+	@title = "Confirm deletion of note ##{params[:id]}"
+	erb :delete
+end
+
+delete '/:id' do
+	n = Note.get params[:id]
+	n.destroy
+	redirect '/'
+end
