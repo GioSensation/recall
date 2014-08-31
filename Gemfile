@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'shotgun'
 gem 'sqlite3'
 gem 'data_mapper'
+gem 'builder'
 
 group :development do
 	gem 'dm-sqlite-adapter'
